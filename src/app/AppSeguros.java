@@ -7,15 +7,16 @@ package app;
 
 import java.io.File;
 import model.Profesor;
+import model.Seguro;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
 /**
  *
- * @author toure19_notebook
+ * @author mrsops
  */
-public class AppProfesor {
+public class AppSeguros {
 
     /**
      * @param args the command line arguments
@@ -26,50 +27,24 @@ public class AppProfesor {
         //Configuration configuration = new Configuration();
         //configuration.configure();
         //sessionFactory = configuration.buildSessionFactory();
-        File config = new File("src/hibernate.cfg.xml");
+        File config = new File("src/hibernateSeguros.cfg.xml");
         SessionFactory factory = new Configuration().configure(config).buildSessionFactory();
 
         // CREAMOS UN OBJETO
-        Profesor profesor=new Profesor(5,"Ramon","Ortiz","Moreno");
+        Seguro seguro=new Seguro();
+        seguro.setIdSeguro(1);
         //CREAR UNA SESION
         Session session = factory.openSession();
         session.beginTransaction();
 
         //GUARDAR OBJETO
-        session.save(profesor);
+        session.save(seguro);
         
         
         //CERRAR CONEXION
         session.getTransaction().commit();
         session.close();
         factory.close();   
-        
-        
-        
-        /*
-        //CREAMOS CONEXION
-        SessionFactory sessionFactory;
-        Configuration configuration = new Configuration();
-        configuration.configure();
-        //configuration.addClass(model.Profesor.class);
-        //configuration.addResource("model/Profesor.hbm.xml");
-        sessionFactory = configuration.buildSessionFactory();
-
-        //CREAMOS UN OBJETO
-        Profesor profesor = new Profesor(1, "Carlos", "Molina", "Marco");
-
-        //CREAMOS UNA SESSION
-        Session session = sessionFactory.openSession();
-        session.beginTransaction();
-
-        //GUARDAR OBJETO
-        session.save(profesor);
-
-        //CERRAR CONEXIÓN
-        session.getTransaction().commit();
-        session.close();
-
-*/
     }
-
+    
 }
