@@ -32,7 +32,7 @@ public class AppSeguros {
 
         // CREAMOS UN OBJETO
         Seguro seguro=new Seguro();
-        seguro.setIdSeguro(1);
+        seguro.setIdSeguro(51);
         //CREAR UNA SESION
         Session session = factory.openSession();
         session.beginTransaction();

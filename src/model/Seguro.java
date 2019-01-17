@@ -209,6 +209,8 @@ public class Seguro implements Serializable{
     public void setFechaCreacion(Date fechaCreacion) {
         this.fechaCreacion = fechaCreacion;
     }
+
+    
     
     
 }
