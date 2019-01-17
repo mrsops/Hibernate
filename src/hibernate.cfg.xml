@@ -10,5 +10,6 @@
     <property name="hibernate.show_sql">true</property>
     <mapping resource="model/Profesor.hbm.xml"/>
     <mapping class="model.Profesor"/>
+    <mapping resource="model/CorreoElectronico.hbm.xml"/>
   </session-factory>
 </hibernate-configuration>

@@ -7,5 +7,13 @@
     <property name="nombre"/>
     <property name="ape1"/>
     <property name="ape2"/> 
+    <set name="correosElectronicos" cascade="all" inverse="true">
+        <key>
+            <column name="idProfesor"/>
+        </key>
+        <one-to-many class="model.CorreoElectronico" />
+        
+    </set>
+   
     </class> 
 </hibernate-mapping>
