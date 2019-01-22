@@ -210,6 +210,13 @@ public class Seguro implements Serializable{
         this.fechaCreacion = fechaCreacion;
     }
 
+    @Override
+    public String toString() {
+        return "Seguro{" + "idSeguro=" + idSeguro + ", nif=" + nif + ", nombre=" + nombre + ", ape1=" + ape1 + ", ape2=" + ape2 + ", edad=" + edad + ", sexo=" + sexo + ", casado=" + casado + ", numHijos=" + numHijos + ", embarazada=" + embarazada + ", oftalmologia=" + oftalmologia + ", dental=" + dental + ", fecundacionInVitro=" + fecundacionInVitro + ", corazon=" + corazon + ", estomacal=" + estomacal + ", rinyones=" + rinyones + ", alergia=" + alergia + ", nombreAlergia=" + nombreAlergia + ", fechaCreacion=" + fechaCreacion + '}';
+    }
+    
+    
+
     
     
     

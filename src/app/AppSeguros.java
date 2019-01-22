@@ -32,13 +32,24 @@ public class AppSeguros {
 
         // CREAMOS UN OBJETO
         Seguro seguro=new Seguro();
-        seguro.setIdSeguro(52);
+        seguro.setIdSeguro(104);
+        seguro.setNombre("Antonio");
+        seguro.setApe1("Malquiano");
+        seguro.setApe2("Vazquez");
+        
+        
+        
         //CREAR UNA SESION
         Session session = factory.openSession();
         session.beginTransaction();
 
         //GUARDAR OBJETO
         session.save(seguro);
+        
+        Seguro nuevoSeguro = (Seguro) session.get(Seguro.class, 104);
+        System.out.println(nuevoSeguro);
+        
+        session.delete(nuevoSeguro);
         
         
         //CERRAR CONEXION
