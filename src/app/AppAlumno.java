@@ -34,9 +34,9 @@ public class AppAlumno {
 
         // CREAMOS UN OBJETO
         Date fechaNacimiento = new Date();
-        fechaNacimiento.setYear(1990-1900);
-        fechaNacimiento.setMonth(12-1);
-        fechaNacimiento.setDate(14);
+        fechaNacimiento.setYear(1990-1900); //Quitamos 1900 por que viene asi los años
+        fechaNacimiento.setMonth(12-1); //Mes 12 (diciembre) le quitamos uno por el rango de los meses 0-11
+        fechaNacimiento.setDate(14); // El dia es tal cual
         Date horaTutoria = new Date(0, 0, 0, 11, 10, 0);// establecemos la hora a las 11:10 el dia , mes y año lo ponemos a 0 por que no interesa
         Date fechaRegistro = new Date();
         Alumno alumno=new Alumno("Julio Iglesias", 1500, true, fechaNacimiento, horaTutoria, fechaRegistro, "Ninguna observacion" );
