@@ -11,6 +11,7 @@ import java.util.Set;
 import model.CorreoElectronico;
 import model.Nombre;
 import model.Profesor;
+import model.TipoFuncionario;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
@@ -34,7 +35,8 @@ public class AppProfesor {
         SessionFactory factory = new Configuration().configure(config).buildSessionFactory();
 
         // CREAMOS UN OBJETO
-        Profesor profesor=new Profesor(new Nombre("Maria","Antonieta","Marinera"));
+        
+        Profesor profesor=new Profesor("Maria", "Antonieta", "Marinera", TipoFuncionario.Practicas);
         Set<CorreoElectronico> correosElectronicos = new HashSet<>();
         correosElectronicos.add(new CorreoElectronico("andros@gmail.com", profesor));
         correosElectronicos.add(new CorreoElectronico("mariandros@gmail.com", profesor));

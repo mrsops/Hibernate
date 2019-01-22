@@ -6,11 +6,9 @@
         <id column="Id" name="id" type="integer">
             <generator class="increment"/>
         </id>
-        <component name="nombre">
             <property name="nombre"/>
             <property name="ape1"/>
             <property name="ape2"/> 
-        </component>
         <set name="correosElectronicos" cascade="all" inverse="true">
             <key>
                 <column name="idProfesor"/>
@@ -18,8 +16,8 @@
             <one-to-many class="model.CorreoElectronico"/>
         </set>
         <property name="tipoFuncionario">
-            <type name="org.hibernate.EnumType">
-                <param name="enumClass">model.Profesor</param>
+            <type name="org.hibernate.type.EnumType">
+                <param name="enumClass">model.TipoFuncionario</param>
                 <param name="type">4</param>
             </type>
         </property>

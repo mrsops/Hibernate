@@ -19,7 +19,7 @@ public class Alumno {
     private boolean registrado;
     private Date fechaNac;
     private Date horaTutoria;
-    private Date fechaResgistro;
+    private Date fechaRegistro;
     private String observaciones;
 
     public Alumno(String nombre, double sueldo, boolean registrado, Date fechaNac, Date horaTutoria, Date fechaResgistro, String observaciones) {
@@ -28,7 +28,7 @@ public class Alumno {
         this.registrado = registrado;
         this.fechaNac = fechaNac;
         this.horaTutoria = horaTutoria;
-        this.fechaResgistro = fechaResgistro;
+        this.fechaRegistro = fechaResgistro;
         this.observaciones = observaciones;
     }
 
@@ -83,13 +83,15 @@ public class Alumno {
         this.horaTutoria = horaTutoria;
     }
 
-    public Date getFechaResgistro() {
-        return fechaResgistro;
+    public Date getFechaRegistro() {
+        return fechaRegistro;
     }
 
-    public void setFechaResgistro(Date fechaResgistro) {
-        this.fechaResgistro = fechaResgistro;
+    public void setFechaRegistro(Date fechaRegistro) {
+        this.fechaRegistro = fechaRegistro;
     }
+
+    
 
     public String getObservaciones() {
         return observaciones;
@@ -98,6 +100,13 @@ public class Alumno {
     public void setObservaciones(String observaciones) {
         this.observaciones = observaciones;
     }
+    
+    
+    
+
+
+    
+    
     
     
     

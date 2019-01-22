@@ -5,11 +5,13 @@
         <id column="Id" name="id" type="integer">
             <generator class="increment"/>
         </id>
-        <component name="nombre">
-            <property name="nombre"/>
-            <property name="ape1"/>
-            <property name="ape2"/> 
-        </component>
+        <property name="nombre" type="string"/>
+        <property name="sueldo" type="double"/>
+        <property name="registrado" type="boolean"/>
+        <property name="fechaNac" type="date"/>
+        <property name="horaTutoria" type="time"/>
+        <property name="fechaRegistro" type="timestamp"/>
+        <property name="observaciones" type="text"/>
         
     </class>
 </hibernate-mapping>
