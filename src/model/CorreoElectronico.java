@@ -19,8 +19,7 @@ public class CorreoElectronico implements Serializable{
     public CorreoElectronico() {
     }
 
-    public CorreoElectronico(int idCorreo, String direccionCorreo, Profesor profesor) {
-        this.idCorreo = idCorreo;
+    public CorreoElectronico(String direccionCorreo, Profesor profesor) {
         this.direccionCorreo = direccionCorreo;
         this.profesor = profesor;
     }

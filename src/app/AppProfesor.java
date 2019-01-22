@@ -9,6 +9,7 @@ import java.io.File;
 import java.util.HashSet;
 import java.util.Set;
 import model.CorreoElectronico;
+import model.Nombre;
 import model.Profesor;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -16,7 +17,7 @@ import org.hibernate.cfg.Configuration;
 
 /**
  *
- * @author toure19_notebook
+ * @author mrsops
  */
 public class AppProfesor {
 
@@ -29,15 +30,15 @@ public class AppProfesor {
         //Configuration configuration = new Configuration();
         //configuration.configure();
         //sessionFactory = configuration.buildSessionFactory();
-        File config = new File("src/hibernate.cfg.xml");
+        File config = new File("src/config/hibernateInstituto.cfg.xml");
         SessionFactory factory = new Configuration().configure(config).buildSessionFactory();
 
         // CREAMOS UN OBJETO
-        Profesor profesor=new Profesor(9,"Juan","Ramon","De los Olmos");
+        Profesor profesor=new Profesor(new Nombre("Maria","Antonieta","Marinera"));
         Set<CorreoElectronico> correosElectronicos = new HashSet<>();
-        correosElectronicos.add(new CorreoElectronico(6, "andros@gmail.com", profesor));
-        correosElectronicos.add(new CorreoElectronico(5, "mariandros@gmail.com", profesor));
-        correosElectronicos.add(new CorreoElectronico(4, "remariandros@gmail.com", profesor));
+        correosElectronicos.add(new CorreoElectronico("andros@gmail.com", profesor));
+        correosElectronicos.add(new CorreoElectronico("mariandros@gmail.com", profesor));
+        correosElectronicos.add(new CorreoElectronico("remariandros@gmail.com", profesor));
         profesor.setCorreosElectronicos(correosElectronicos);
         
         

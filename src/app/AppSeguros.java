@@ -27,12 +27,12 @@ public class AppSeguros {
         //Configuration configuration = new Configuration();
         //configuration.configure();
         //sessionFactory = configuration.buildSessionFactory();
-        File config = new File("src/hibernateSeguros.cfg.xml");
+        File config = new File("src/config/hibernateSeguros.cfg.xml");
         SessionFactory factory = new Configuration().configure(config).buildSessionFactory();
 
         // CREAMOS UN OBJETO
         Seguro seguro=new Seguro();
-        seguro.setIdSeguro(51);
+        seguro.setIdSeguro(52);
         //CREAR UNA SESION
         Session session = factory.openSession();
         session.beginTransaction();
