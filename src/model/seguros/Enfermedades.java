@@ -3,14 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package model;
+package model.seguros;
+
+import java.io.Serializable;
 
 /**
  *
  * @author mrsops
  */
-public enum TipoFuncionario {
-    Carrera,
-    Practicas,
-    Interino
+public class Enfermedades implements Serializable{
+    
 }

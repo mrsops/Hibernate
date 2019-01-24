@@ -6,8 +6,7 @@
 package app;
 
 import java.io.File;
-import model.Profesor;
-import model.Seguro;
+import model.seguros.Seguro;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
