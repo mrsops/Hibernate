@@ -9,8 +9,9 @@
     <property name="hibernate.connection.password">seguros</property>
     <property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
     <property name="hibernate.show_sql">true</property>
-    <mapping resource="maps/Seguro.hbm.xml"/>
+    <mapping resource="maps/seguros/Seguro.hbm.xml"/>
     <mapping class="model.Seguro"/>
-    <mapping resource="maps/Seguro.hbm.xml"/>
+    <mapping resource="maps/seguros/Seguro.hbm.xml"/>
+    <mapping resource="maps/seguros/AsistenciaMedica.hbm.xml"/>
   </session-factory>
 </hibernate-configuration>
